@@ -19,21 +19,8 @@
 <circle cx="300" cy="300" r="280" fill="none" stroke="#d8451f" stroke-width="8"/>
 <circle cx="300" cy="300" r="262" fill="none" stroke="#f6e9d2" stroke-width="3" stroke-dasharray="3 9"/>
 
-<!-- pole-frame teepee beside the camper -->
-<g fill="none" stroke="#8a7460" stroke-width="6" stroke-linecap="round">
-<path d="M36 414 L191 163"/>
-<path d="M64 414 L190 144"/>
-<path d="M96 414 L181 124"/>
-<path d="M130 414 L159 146"/>
-<path d="M166 414 L142 132"/>
-<path d="M204 414 L119 124"/>
-<path d="M244 414 L113 158"/>
-<path d="M282 414 L95 156"/>
-</g>
-<path d="M138 240 H162" stroke="#4a3728" stroke-width="10" stroke-linecap="round"/>
-
 <!-- the silver camper -->
-<g transform="translate(340 414) scale(1.25) translate(-300 -414)">
+<g transform="translate(300 414) scale(1.25) translate(-300 -414)">
 <path d="M150 340 C 150 288, 205 258, 300 258 C 395 258, 450 288, 450 340 L 450 372 C 450 383, 441 392, 430 392 L 170 392 C 159 392, 150 383, 150 372 Z" fill="url(#chrome)" stroke="#1d1310" stroke-width="6"/>
 <path d="M160 366 H440" stroke="#8f8c86" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round"/>
 <!-- door -->
