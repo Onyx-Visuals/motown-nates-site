@@ -134,34 +134,18 @@ img{max-width:100%;display:block}
 .btn.fire{background:var(--ember);border-color:var(--ember)}
 .btn.fire:hover{background:var(--mustard);border-color:var(--mustard);color:var(--pit)}
 
-/* cartoon smoker beside the camper photo */
-.hero .snap{position:relative;overflow:visible}
+/* smoker line art in the hero background */
+.hero::before{
+  content:"";position:absolute;z-index:0;pointer-events:none;
+  right:50%;bottom:0;margin-right:-270px;
+  width:420px;height:calc(100% - 40px);
+  background:url(img/smoker-frame.svg) no-repeat center bottom/contain;
+  opacity:.28;
+}
 .hero .wrap > div:first-child{max-width:540px}
-.smoker-art{
-  position:absolute;left:-200px;bottom:-14px;width:190px;z-index:3;pointer-events:none;
-  transform:rotate(-1.5deg);
-  fill:var(--cream);stroke:var(--pit);stroke-width:7;stroke-linejoin:round;stroke-linecap:round;
-  filter:drop-shadow(6px 6px 0 var(--ember));
-}
-.smoker-art .line{fill:none;stroke-width:5}
-.smoker-art .handle{fill:var(--mustard)}
-.smoker-art .vent{fill:var(--ember)}
-.smoker-art .leg{fill:none}
-.smoker-art .wheel{fill:var(--mustard)}
-.smoker-art .puff{fill:#fff;fill-opacity:.95;stroke-width:6;transform-box:fill-box;transform-origin:center}
-@media (prefers-reduced-motion:no-preference){
-  .smoker-art .puff{animation:puff 2.4s ease-in-out infinite}
-  .smoker-art .p2{animation-delay:.6s}
-  .smoker-art .p3{animation-delay:1.2s}
-  @keyframes puff{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-6px) scale(1.06)}}
-}
 @media (max-width:860px){
-  .hero .snap{margin-top:20px;margin-left:auto;margin-right:0;justify-self:end}
-  .smoker-art{left:-128px;width:150px;bottom:-10px}
-}
-@media (max-width:480px){
-  .hero .snap{width:min(100%,280px)}
-  .smoker-art{left:-86px;width:96px;bottom:-10px}
+  .hero::before{right:auto;left:-40px;margin:0;width:260px;opacity:.18}
+  .hero .snap{margin-top:20px}
 }
 
 /* ---------- section scaffolding ---------- */
