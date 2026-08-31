@@ -74,41 +74,109 @@
 <section class="cater-form" id="request">
   <div class="wrap">
     <h2 class="kicker">Request a Quote</h2>
-    <p class="sub">Tell us about your event and we'll get back to you with a menu and a price. Prefer to talk? Call 906-748-4892.</p>
+    <p class="sub">Tell us about your event and we'll reply with a menu and a price, usually within one business day. Prefer to talk? Call 906-748-4892.</p>
     <form action="https://formsubmit.co/hello@lickitysplitweb.com" method="POST" class="quote">
       <input type="hidden" name="_subject" value="Catering request from motown-nates-site">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://onyx-visuals.github.io/motown-nates-site/thanks.html">
       <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-      <div class="row">
-        <label>Your name<input type="text" name="name" required autocomplete="name"></label>
-        <label>Phone<input type="tel" name="phone" required autocomplete="tel"></label>
-      </div>
-      <div class="row">
-        <label>Email<input type="email" name="email" autocomplete="email"></label>
-        <label>Event date<input type="date" name="event_date" required></label>
-      </div>
-      <div class="row">
-        <label>Headcount<input type="number" name="headcount" min="1" required></label>
-        <label>Type of event
-          <select name="event_type">
-            <option>Work lunch</option>
-            <option>Birthday or family party</option>
-            <option>Company picnic or team event</option>
-            <option>Wedding or rehearsal</option>
-            <option>Tailgate or game day</option>
-            <option>Other</option>
-          </select>
-        </label>
-      </div>
-      <fieldset>
-        <legend>Pickup or delivery</legend>
-        <label class="inline"><input type="radio" name="service" value="Pickup at 800 Ashmun St" checked> Pickup at 800 Ashmun St</label>
-        <label class="inline"><input type="radio" name="service" value="Delivery"> Delivery</label>
+
+      <fieldset class="group">
+        <legend>Contact</legend>
+        <div class="row">
+          <label>Your name<input type="text" name="name" required autocomplete="name" placeholder="First and last"></label>
+          <label>Company or group <span class="opt">optional</span><input type="text" name="company" autocomplete="organization" placeholder="LSSU Athletics, Smith family reunion"></label>
+        </div>
+        <div class="row">
+          <label>Phone<input type="tel" name="phone" required autocomplete="tel" placeholder="906-555-0100"></label>
+          <label>Email<input type="email" name="email" autocomplete="email" placeholder="you@example.com"></label>
+        </div>
+        <div class="choices">
+          <span class="choices-label">Best way to reach you</span>
+          <label class="pill"><input type="radio" name="contact_pref" value="Call" checked><span>Call</span></label>
+          <label class="pill"><input type="radio" name="contact_pref" value="Text"><span>Text</span></label>
+          <label class="pill"><input type="radio" name="contact_pref" value="Email"><span>Email</span></label>
+        </div>
       </fieldset>
-      <label>What are you thinking?<textarea name="details" rows="5" placeholder="Brisket and pulled pork for 30, a taco bar, boxed lunches, anything you have in mind"></textarea></label>
-      <button type="submit" class="btn fire">Send Request</button>
+
+      <fieldset class="group">
+        <legend>Event</legend>
+        <div class="row three">
+          <label>Date<input type="date" name="event_date" required></label>
+          <label>Serving time<input type="time" name="serve_time"></label>
+          <label>Headcount<input type="number" name="headcount" min="1" required placeholder="25"></label>
+        </div>
+        <div class="row">
+          <label>Type of event
+            <select name="event_type">
+              <option>Work lunch</option>
+              <option>Job-site crew meal</option>
+              <option>Birthday or family party</option>
+              <option>Graduation</option>
+              <option>Company picnic or team event</option>
+              <option>Wedding or rehearsal dinner</option>
+              <option>Tailgate or game day</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label>Budget per person
+            <select name="budget">
+              <option value="">Not sure yet</option>
+              <option>Under $12</option>
+              <option>$12 to $18</option>
+              <option>$18 to $25</option>
+              <option>$25 and up</option>
+            </select>
+          </label>
+        </div>
+        <div class="choices">
+          <span class="choices-label">Pickup or delivery</span>
+          <label class="pill"><input type="radio" name="service" value="Pickup at 800 Ashmun St" checked><span>Pickup at 800 Ashmun St</span></label>
+          <label class="pill"><input type="radio" name="service" value="Delivery"><span>Delivery</span></label>
+          <label class="pill"><input type="radio" name="service" value="On-site serving"><span>On-site serving</span></label>
+        </div>
+        <label>Event address <span class="opt">for delivery or on-site</span><input type="text" name="address" autocomplete="street-address" placeholder="Street, city"></label>
+      </fieldset>
+
+      <fieldset class="group">
+        <legend>Food</legend>
+        <div class="choices">
+          <span class="choices-label">What sounds good? Check all that apply</span>
+          <label class="pill"><input type="checkbox" name="menu[]" value="Smoked brisket"><span>Smoked brisket</span></label>
+          <label class="pill"><input type="checkbox" name="menu[]" value="Pulled pork"><span>Pulled pork</span></label>
+          <label class="pill"><input type="checkbox" name="menu[]" value="Taco bar"><span>Taco bar</span></label>
+          <label class="pill"><input type="checkbox" name="menu[]" value="Burgers and hot dogs"><span>Burgers and hot dogs</span></label>
+          <label class="pill"><input type="checkbox" name="menu[]" value="Gyros"><span>Gyros</span></label>
+          <label class="pill"><input type="checkbox" name="menu[]" value="Rice bowls or burritos"><span>Rice bowls or burritos</span></label>
+          <label class="pill"><input type="checkbox" name="menu[]" value="Boxed lunches"><span>Boxed lunches</span></label>
+          <label class="pill"><input type="checkbox" name="menu[]" value="Pasta"><span>Pasta</span></label>
+        </div>
+        <div class="choices">
+          <span class="choices-label">Sides</span>
+          <label class="pill"><input type="checkbox" name="sides[]" value="Hand-cut fries"><span>Hand-cut fries</span></label>
+          <label class="pill"><input type="checkbox" name="sides[]" value="Onion rings"><span>Onion rings</span></label>
+          <label class="pill"><input type="checkbox" name="sides[]" value="Mac and cheese"><span>Mac and cheese</span></label>
+          <label class="pill"><input type="checkbox" name="sides[]" value="Coleslaw"><span>Coleslaw</span></label>
+          <label class="pill"><input type="checkbox" name="sides[]" value="Chips"><span>Chips</span></label>
+        </div>
+        <div class="choices">
+          <span class="choices-label">Allergies and dietary needs</span>
+          <label class="pill"><input type="checkbox" name="dietary[]" value="Nut allergy"><span>Nut allergy</span></label>
+          <label class="pill"><input type="checkbox" name="dietary[]" value="Gluten-free"><span>Gluten-free</span></label>
+          <label class="pill"><input type="checkbox" name="dietary[]" value="Dairy-free"><span>Dairy-free</span></label>
+          <label class="pill"><input type="checkbox" name="dietary[]" value="Shellfish allergy"><span>Shellfish allergy</span></label>
+          <label class="pill"><input type="checkbox" name="dietary[]" value="Vegetarian options"><span>Vegetarian options</span></label>
+          <label class="pill"><input type="checkbox" name="dietary[]" value="No pork"><span>No pork</span></label>
+          <label class="pill"><input type="checkbox" name="dietary[]" value="No beef"><span>No beef</span></label>
+        </div>
+        <label>Anything else we should know? <span class="opt">optional</span><textarea name="details" rows="4" placeholder="How many with each dietary need, favorites from past visits, setup details, anything else"></textarea></label>
+      </fieldset>
+
+      <div class="form-foot">
+        <button type="submit" class="btn fire">Send Request</button>
+        <p class="fineprint">No payment now. We'll confirm details and pricing with you before anything is booked.</p>
+      </div>
     </form>
   </div>
 </section>

@@ -235,20 +235,39 @@ section{padding:80px 0}
 .cater-how .btn.fire{color:var(--cream)}
 
 .cater-form{background:var(--paper-deep)}
-.quote{margin-top:32px;max-width:720px;display:grid;gap:18px}
-.quote .row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-@media (max-width:600px){.quote .row{grid-template-columns:1fr}}
-.quote label{display:flex;flex-direction:column;gap:6px;font-weight:900;font-size:.95rem}
-.quote input,.quote select,.quote textarea{
-  font:inherit;font-weight:500;padding:12px 14px;
-  border:3px solid var(--ink);background:var(--paper);color:var(--ink);border-radius:0;
+.quote{
+  margin-top:32px;max-width:820px;
+  background:var(--paper);border:3px solid var(--ink);box-shadow:8px 8px 0 var(--ember);
+  padding:8px 32px 32px;display:grid;gap:8px;
 }
-.quote input:focus,.quote select:focus,.quote textarea:focus{outline:3px solid var(--ember);outline-offset:2px}
-.quote fieldset{border:3px solid var(--ink);padding:14px 16px;display:flex;gap:24px;flex-wrap:wrap}
-.quote legend{font-weight:900;padding:0 8px}
-.quote .inline{flex-direction:row;align-items:center;gap:8px;font-weight:700}
-.quote .inline input{width:20px;height:20px;padding:0;accent-color:var(--ember)}
-.quote .btn{justify-self:start;cursor:pointer;font:inherit;font-weight:900;color:var(--cream)}
+.quote .group{border:0;border-top:3px solid var(--ink);padding:22px 0 26px;margin:0;display:grid;gap:18px}
+.quote .group:first-of-type{border-top:0}
+.quote legend{font-family:'Alfa Slab One',serif;font-size:1.25rem;color:var(--ember);padding:0 10px 0 0;margin-bottom:6px}
+.quote .row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.quote .row.three{grid-template-columns:1fr 1fr 1fr}
+@media (max-width:640px){.quote{padding:8px 20px 24px}.quote .row,.quote .row.three{grid-template-columns:1fr}}
+.quote label{display:flex;flex-direction:column;gap:6px;font-weight:900;font-size:.92rem}
+.quote .opt{font-weight:500;color:#6b5744;font-size:.85rem;margin-left:6px}
+.quote input,.quote select,.quote textarea{
+  font:inherit;font-weight:500;font-size:1rem;padding:11px 13px;
+  border:2px solid #b39a72;background:#fffaf0;color:var(--ink);border-radius:0;
+}
+.quote input::placeholder,.quote textarea::placeholder{color:#a08d74}
+.quote input:focus,.quote select:focus,.quote textarea:focus{outline:3px solid var(--ember);outline-offset:1px;border-color:var(--ink)}
+.quote .choices{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.quote .choices-label{flex-basis:100%;font-weight:900;font-size:.92rem}
+.quote .pill{position:relative;flex-direction:row}
+.quote .pill input{position:absolute;opacity:0;width:0;height:0}
+.quote .pill span{
+  display:inline-block;padding:8px 14px;font-weight:700;font-size:.9rem;
+  border:2px solid var(--ink);background:var(--paper);cursor:pointer;user-select:none;
+}
+.quote .pill input:checked+span{background:var(--ember);border-color:var(--ember);color:var(--cream)}
+.quote .pill input:focus-visible+span{outline:3px solid var(--ember);outline-offset:2px}
+.quote .pill span:hover{background:var(--paper-deep)}
+.form-foot{display:flex;align-items:center;gap:22px;flex-wrap:wrap;padding-top:8px}
+.form-foot .btn{cursor:pointer;font:inherit;font-weight:900;color:var(--cream)}
+.form-foot .fineprint{font-size:.85rem;color:#6b5744;max-width:40ch;margin:0}
 .cater-how .cta-row{display:flex;gap:16px;flex-wrap:wrap}
 .cater-how .btn{color:var(--cream)}
 
