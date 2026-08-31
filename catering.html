@@ -67,23 +67,23 @@
       <li><strong>Pick up at 800 Ashmun St</strong> or ask about delivery in the Sault area.</li>
     </ol>
     <p class="cater-note">Please give us at least 48 hours notice for orders over 20 people so the brisket has time to smoke.</p>
-    <div class="cta-row"><a class="btn fire" href="#request">Request a Quote</a><a class="btn" href="tel:9067484892">Call 906-748-4892</a></div>
+    <div class="cta-row"><a class="btn fire" href="#request">Book Your Event</a><a class="btn" href="tel:9067484892">Call 906-748-4892</a></div>
   </div>
 </section>
 
 <section class="cater-form" id="request">
   <div class="wrap">
-    <h2 class="kicker">Request a Quote</h2>
-    <p class="sub">Fill this out and we'll reply within a day with a menu and a price. Prefer to talk? Call 906-748-4892.</p>
+    <h2 class="kicker">Book Your Event</h2>
+    <p class="sub">Tell us about your event and we'll reply within a day with a menu and pricing. Prefer to talk? Call 906-748-4892.</p>
     <form action="https://formsubmit.co/hello@lickitysplitweb.com" method="POST" class="quote">
-      <input type="hidden" name="_subject" value="Catering request from motown-nates-site">
+      <input type="hidden" name="_subject" value="Catering booking from motown-nates-site">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://onyx-visuals.github.io/motown-nates-site/thanks.html">
       <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
       <div class="fgroup">
-        <h3>Contact</h3>
+        <h3><span class="num">1</span>Your contact info</h3>
         <div class="row">
           <label>Name <span class="req">required</span><input type="text" name="name" required autocomplete="name" placeholder="Jane Smith"></label>
           <label>Phone <span class="req">required</span><input type="tel" name="phone" required autocomplete="tel" placeholder="906-555-0123"></label>
@@ -95,7 +95,7 @@
       </div>
 
       <div class="fgroup">
-        <h3>Event</h3>
+        <h3><span class="num">2</span>About the event</h3>
         <div class="row">
           <label>Event date <span class="req">required</span><input type="date" name="event_date" required></label>
           <label>Serving time<input type="time" name="serving_time" value="12:00"></label>
@@ -116,37 +116,39 @@
         </div>
         <fieldset>
           <legend>Pickup or delivery</legend>
-          <label class="inline"><input type="radio" name="service" value="Pickup at 800 Ashmun St" checked> Pickup at 800 Ashmun St</label>
-          <label class="inline"><input type="radio" name="service" value="Delivery"> Delivery</label>
+          <div class="radios">
+            <label class="inline"><input type="radio" name="service" value="Pickup at 800 Ashmun St" checked> Pickup at 800 Ashmun St</label>
+            <label class="inline"><input type="radio" name="service" value="Delivery"> Delivery</label>
+          </div>
         </fieldset>
         <label>Delivery address<input type="text" name="delivery_address" placeholder="Only if you chose delivery"></label>
       </div>
 
       <div class="fgroup">
-        <h3>Food</h3>
+        <h3><span class="num">3</span>What to serve</h3>
         <fieldset>
           <legend>What are you interested in? Check all that apply.</legend>
           <div class="checks">
-            <label class="inline"><input type="checkbox" name="menu[]" value="Smoked brisket"> Smoked brisket</label>
-            <label class="inline"><input type="checkbox" name="menu[]" value="Pulled pork"> Pulled pork</label>
-            <label class="inline"><input type="checkbox" name="menu[]" value="Taco bar"> Taco bar</label>
-            <label class="inline"><input type="checkbox" name="menu[]" value="Burgers and coneys"> Burgers and coneys</label>
-            <label class="inline"><input type="checkbox" name="menu[]" value="Boxed lunches"> Boxed lunches</label>
-            <label class="inline"><input type="checkbox" name="menu[]" value="Rice bowls and burritos"> Rice bowls and burritos</label>
-            <label class="inline"><input type="checkbox" name="menu[]" value="Sides only"> Sides only</label>
-            <label class="inline"><input type="checkbox" name="menu[]" value="Not sure, help me choose"> Not sure, help me choose</label>
+            <label class="chip"><input type="checkbox" name="menu[]" value="Smoked brisket"><span>Smoked brisket</span></label>
+            <label class="chip"><input type="checkbox" name="menu[]" value="Pulled pork"><span>Pulled pork</span></label>
+            <label class="chip"><input type="checkbox" name="menu[]" value="Taco bar"><span>Taco bar</span></label>
+            <label class="chip"><input type="checkbox" name="menu[]" value="Burgers and coneys"><span>Burgers and coneys</span></label>
+            <label class="chip"><input type="checkbox" name="menu[]" value="Boxed lunches"><span>Boxed lunches</span></label>
+            <label class="chip"><input type="checkbox" name="menu[]" value="Rice bowls and burritos"><span>Rice bowls and burritos</span></label>
+            <label class="chip"><input type="checkbox" name="menu[]" value="Sides only"><span>Sides only</span></label>
+            <label class="chip"><input type="checkbox" name="menu[]" value="Not sure, help me choose"><span>Not sure, help me choose</span></label>
           </div>
         </fieldset>
         <fieldset>
           <legend>Allergies or dietary needs in your group</legend>
           <div class="checks">
-            <label class="inline"><input type="checkbox" name="dietary[]" value="None"> None that we know of</label>
-            <label class="inline"><input type="checkbox" name="dietary[]" value="Vegetarian"> Vegetarian</label>
-            <label class="inline"><input type="checkbox" name="dietary[]" value="Gluten-free"> Gluten-free</label>
-            <label class="inline"><input type="checkbox" name="dietary[]" value="Dairy-free"> Dairy-free</label>
-            <label class="inline"><input type="checkbox" name="dietary[]" value="Nut allergy"> Nut allergy</label>
-            <label class="inline"><input type="checkbox" name="dietary[]" value="Shellfish allergy"> Shellfish allergy</label>
-            <label class="inline"><input type="checkbox" name="dietary[]" value="Pork-free"> Pork-free</label>
+            <label class="chip"><input type="checkbox" name="dietary[]" value="None"><span>None that we know of</span></label>
+            <label class="chip"><input type="checkbox" name="dietary[]" value="Vegetarian"><span>Vegetarian</span></label>
+            <label class="chip"><input type="checkbox" name="dietary[]" value="Gluten-free"><span>Gluten-free</span></label>
+            <label class="chip"><input type="checkbox" name="dietary[]" value="Dairy-free"><span>Dairy-free</span></label>
+            <label class="chip"><input type="checkbox" name="dietary[]" value="Nut allergy"><span>Nut allergy</span></label>
+            <label class="chip"><input type="checkbox" name="dietary[]" value="Shellfish allergy"><span>Shellfish allergy</span></label>
+            <label class="chip"><input type="checkbox" name="dietary[]" value="Pork-free"><span>Pork-free</span></label>
           </div>
           <label>Other allergies or notes<input type="text" name="dietary_other" placeholder="Anything else the kitchen should know"></label>
         </fieldset>
@@ -155,7 +157,7 @@
 
       <div class="fsubmit">
         <button type="submit" class="btn fire">Send Request</button>
-        <span class="fnote">No payment now. We'll confirm details before anything is scheduled.</span>
+        <span class="fnote">No payment now. We confirm every detail with you before anything is scheduled.</span>
       </div>
     </form>
   </div>
