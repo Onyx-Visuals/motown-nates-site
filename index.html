@@ -153,6 +153,23 @@ section{padding:80px 0}
   max-width:640px;
 }
 
+/* ---------- gallery ---------- */
+.gallery{background:var(--paper-deep);padding-top:64px;padding-bottom:64px}
+.shots{
+  margin-top:36px;
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:22px;
+}
+.shots figure{border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ember);background:var(--paper)}
+.shots img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+.shots figcaption{padding:10px 14px;font-weight:900;font-size:.9rem}
+.shots figure{display:flex;flex-direction:column}
+.shots img{flex:1}
+.shots .s2{grid-column:span 2}
+.shots .s3{grid-column:span 3}
+@media (max-width:720px){.shots{grid-template-columns:1fr 1fr}.shots .s2,.shots .s3{grid-column:span 2}}
+
 /* ---------- teepee / place ---------- */
 .place{background:var(--pit);color:var(--cream)}
 .place .kicker{color:var(--mustard)}
@@ -330,6 +347,19 @@ footer a{color:var(--cream)}
       </div>
     </div>
     <p class="menu-note">* Consuming raw or uncooked meats or eggs may increase your risk of foodborne illness.</p>
+  </div>
+</section>
+
+<section class="gallery" aria-label="Food photos">
+  <div class="wrap">
+    <h2 class="kicker">Fresh Off the Board</h2>
+    <div class="shots">
+      <figure class="s3"><img src="img/burger-and-fries.jpg" alt="Double cheeseburger with lettuce and tomato beside a pile of waffle fries"><figcaption>The Big Heavy &amp; waffle fries</figcaption></figure>
+      <figure class="s3"><img src="img/street-tacos.jpg" alt="Four street tacos topped with lettuce, cotija, crema, and salsa with lime wedges"><figcaption>Street tacos</figcaption></figure>
+      <figure class="s2"><img src="img/brisket-sandwich.jpg" alt="BBQ brisket sandwich with pickles and onion on a brioche bun"><figcaption>BBQ brisket sandwich</figcaption></figure>
+      <figure class="s2"><img src="img/gyro.jpg" alt="Gyro wrapped in foil with tzatziki, tomato, and red onion, fries on the side"><figcaption>Gyro</figcaption></figure>
+      <figure class="s2"><img src="img/tacos-plate.jpg" alt="Platter of carnitas tacos with onion and cilantro"><figcaption>Smoked carnitas tacos</figcaption></figure>
+    </div>
   </div>
 </section>
 
