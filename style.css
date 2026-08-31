@@ -324,4 +324,5 @@ footer{
 }
 footer .wrap{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
 .foot-logo{width:140px;height:140px}
+.foot-nav{justify-content:center}
 footer a{color:var(--cream)}
