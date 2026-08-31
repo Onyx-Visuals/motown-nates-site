@@ -2,8 +2,8 @@
 <title id="t">Motown Nate's, Detroit-style BBQ, Sault Ste. Marie, Michigan</title>
 <defs>
   <clipPath id="awning">
-    <rect x="150" y="238" width="300" height="34"/>
-    <circle cx="162.5" cy="272" r="12.5"/><circle cx="187.5" cy="272" r="12.5"/><circle cx="212.5" cy="272" r="12.5"/><circle cx="237.5" cy="272" r="12.5"/><circle cx="262.5" cy="272" r="12.5"/><circle cx="287.5" cy="272" r="12.5"/><circle cx="312.5" cy="272" r="12.5"/><circle cx="337.5" cy="272" r="12.5"/><circle cx="362.5" cy="272" r="12.5"/><circle cx="387.5" cy="272" r="12.5"/><circle cx="412.5" cy="272" r="12.5"/><circle cx="437.5" cy="272" r="12.5"/>
+    <rect x="184" y="272" width="168" height="24"/>
+    <circle cx="191.0" cy="296" r="7.0"/><circle cx="205.0" cy="296" r="7.0"/><circle cx="219.0" cy="296" r="7.0"/><circle cx="233.0" cy="296" r="7.0"/><circle cx="247.0" cy="296" r="7.0"/><circle cx="261.0" cy="296" r="7.0"/><circle cx="275.0" cy="296" r="7.0"/><circle cx="289.0" cy="296" r="7.0"/><circle cx="303.0" cy="296" r="7.0"/><circle cx="317.0" cy="296" r="7.0"/><circle cx="331.0" cy="296" r="7.0"/><circle cx="345.0" cy="296" r="7.0"/>
   </clipPath>
   <linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
     <stop offset="0" stop-color="#f2f1ee"/>
@@ -31,8 +31,8 @@
 <rect x="198" y="310" width="134" height="40" rx="5" fill="#f6e9d2"/>
 <rect x="182" y="354" width="166" height="10" rx="3" fill="#1d1310"/>
 <!-- awning -->
-<g clip-path="url(#awning)"><rect x="150" y="238" width="25" height="60" fill="#d8451f"/><rect x="175" y="238" width="25" height="60" fill="#f6e9d2"/><rect x="200" y="238" width="25" height="60" fill="#d8451f"/><rect x="225" y="238" width="25" height="60" fill="#f6e9d2"/><rect x="250" y="238" width="25" height="60" fill="#d8451f"/><rect x="275" y="238" width="25" height="60" fill="#f6e9d2"/><rect x="300" y="238" width="25" height="60" fill="#d8451f"/><rect x="325" y="238" width="25" height="60" fill="#f6e9d2"/><rect x="350" y="238" width="25" height="60" fill="#d8451f"/><rect x="375" y="238" width="25" height="60" fill="#f6e9d2"/><rect x="400" y="238" width="25" height="60" fill="#d8451f"/><rect x="425" y="238" width="25" height="60" fill="#f6e9d2"/></g>
-<path d="M146 238 H454" stroke="#1d1310" stroke-width="6" stroke-linecap="round"/>
+<g clip-path="url(#awning)"><rect x="184" y="272" width="14" height="40" fill="#d8451f"/><rect x="198" y="272" width="14" height="40" fill="#f6e9d2"/><rect x="212" y="272" width="14" height="40" fill="#d8451f"/><rect x="226" y="272" width="14" height="40" fill="#f6e9d2"/><rect x="240" y="272" width="14" height="40" fill="#d8451f"/><rect x="254" y="272" width="14" height="40" fill="#f6e9d2"/><rect x="268" y="272" width="14" height="40" fill="#d8451f"/><rect x="282" y="272" width="14" height="40" fill="#f6e9d2"/><rect x="296" y="272" width="14" height="40" fill="#d8451f"/><rect x="310" y="272" width="14" height="40" fill="#f6e9d2"/><rect x="324" y="272" width="14" height="40" fill="#d8451f"/><rect x="338" y="272" width="14" height="40" fill="#f6e9d2"/></g>
+<path d="M180 272 H356" stroke="#1d1310" stroke-width="6" stroke-linecap="round"/>
 <!-- wheels -->
 <circle cx="215" cy="394" r="20" fill="#1d1310"/>
 <circle cx="215" cy="394" r="9" fill="#c8c6c0"/>
