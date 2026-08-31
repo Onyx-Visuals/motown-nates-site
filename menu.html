@@ -14,18 +14,13 @@
 <header class="topbar">
   <div class="wrap">
     <a class="wordmark-sm" href="index.html">MOTOWN NATE'S</a>
-    <div class="info"><span>Mon&ndash;Fri 11am&ndash;7pm</span><a href="tel:9067484892">906-748-4892</a></div>
-    <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><span></span></button>
+    <nav class="nav" aria-label="Site">
+      <a href="index.html">Home</a>
+      <a href="menu.html" aria-current="page">Menu</a>
+      <a href="teepee.html">The Teepee</a>
+      <a href="find-us.html">Find Us</a>
+    </nav>
   </div>
-  <nav class="menu-panel" id="site-menu" data-open="false" aria-label="Site">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="menu.html" aria-current="page">Menu</a></li>
-      <li><a href="teepee.html">The Teepee</a></li>
-      <li><a href="find-us.html">Find Us</a></li>
-      <li class="small">800 Ashmun St, Sault Ste. Marie, MI &middot; <a href="tel:9067484892" style="display:inline;padding:0;border:0;font:inherit;color:var(--cream)">906-748-4892</a></li>
-    </ul>
-  </nav>
 </header>
 
 <main>
@@ -111,17 +106,5 @@
     <div>Detroit is everywhere.</div>
   </div>
 </footer>
-<script>
-(function(){
-  var b=document.querySelector('.burger'),p=document.getElementById('site-menu');
-  b.addEventListener('click',function(){
-    var open=b.getAttribute('aria-expanded')==='true';
-    b.setAttribute('aria-expanded',String(!open));
-    b.setAttribute('aria-label',open?'Open menu':'Close menu');
-    p.setAttribute('data-open',String(!open));
-  });
-  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&b.getAttribute('aria-expanded')==='true'){b.click();b.focus();}});
-})();
-</script>
 </body>
 </html>
