@@ -234,6 +234,24 @@ section{padding:80px 0}
 .cater-note{color:#d8c6ab;max-width:60ch;margin:8px 0 30px}
 .cater-how .btn.fire{color:var(--cream)}
 
+.cater-form{background:var(--paper-deep)}
+.quote{margin-top:32px;max-width:720px;display:grid;gap:18px}
+.quote .row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:600px){.quote .row{grid-template-columns:1fr}}
+.quote label{display:flex;flex-direction:column;gap:6px;font-weight:900;font-size:.95rem}
+.quote input,.quote select,.quote textarea{
+  font:inherit;font-weight:500;padding:12px 14px;
+  border:3px solid var(--ink);background:var(--paper);color:var(--ink);border-radius:0;
+}
+.quote input:focus,.quote select:focus,.quote textarea:focus{outline:3px solid var(--ember);outline-offset:2px}
+.quote fieldset{border:3px solid var(--ink);padding:14px 16px;display:flex;gap:24px;flex-wrap:wrap}
+.quote legend{font-weight:900;padding:0 8px}
+.quote .inline{flex-direction:row;align-items:center;gap:8px;font-weight:700}
+.quote .inline input{width:20px;height:20px;padding:0;accent-color:var(--ember)}
+.quote .btn{justify-self:start;cursor:pointer;font:inherit;font-weight:900;color:var(--cream)}
+.cater-how .cta-row{display:flex;gap:16px;flex-wrap:wrap}
+.cater-how .btn{color:var(--cream)}
+
 /* ---------- reviews ---------- */
 .reviews{background:var(--paper-deep)}
 .quotes{
