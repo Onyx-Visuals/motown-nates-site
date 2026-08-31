@@ -236,38 +236,32 @@ section{padding:80px 0}
 
 .cater-form{background:var(--paper-deep)}
 .quote{
-  margin-top:32px;max-width:820px;
+  margin-top:32px;max-width:760px;
   background:var(--paper);border:3px solid var(--ink);box-shadow:8px 8px 0 var(--ember);
-  padding:8px 32px 32px;display:grid;gap:8px;
+  padding:8px 32px 32px;
 }
-.quote .group{border:0;border-top:3px solid var(--ink);padding:22px 0 26px;margin:0;display:grid;gap:18px}
-.quote .group:first-of-type{border-top:0}
-.quote legend{font-family:'Alfa Slab One',serif;font-size:1.25rem;color:var(--ember);padding:0 10px 0 0;margin-bottom:6px}
+.fgroup{padding:24px 0;border-bottom:2px dotted #b39a72;display:grid;gap:18px}
+.fgroup:last-of-type{border-bottom:0}
+.fgroup h3{font-family:'Alfa Slab One',serif;font-weight:400;font-size:1.25rem;color:var(--ember)}
 .quote .row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.quote .row.three{grid-template-columns:1fr 1fr 1fr}
-@media (max-width:640px){.quote{padding:8px 20px 24px}.quote .row,.quote .row.three{grid-template-columns:1fr}}
+@media (max-width:600px){.quote .row{grid-template-columns:1fr}.quote{padding:8px 18px 24px}}
 .quote label{display:flex;flex-direction:column;gap:6px;font-weight:900;font-size:.92rem}
-.quote .opt{font-weight:500;color:#6b5744;font-size:.85rem;margin-left:6px}
+.req{font-weight:500;color:#7a6350;font-size:.8rem;margin-left:6px}
 .quote input,.quote select,.quote textarea{
-  font:inherit;font-weight:500;font-size:1rem;padding:11px 13px;
-  border:2px solid #b39a72;background:#fffaf0;color:var(--ink);border-radius:0;
+  font:inherit;font-weight:500;padding:11px 14px;
+  border:2px solid #7a6350;background:#fff;color:var(--ink);border-radius:0;
 }
-.quote input::placeholder,.quote textarea::placeholder{color:#a08d74}
-.quote input:focus,.quote select:focus,.quote textarea:focus{outline:3px solid var(--ember);outline-offset:1px;border-color:var(--ink)}
-.quote .choices{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.quote .choices-label{flex-basis:100%;font-weight:900;font-size:.92rem}
-.quote .pill{position:relative;flex-direction:row}
-.quote .pill input{position:absolute;opacity:0;width:0;height:0}
-.quote .pill span{
-  display:inline-block;padding:8px 14px;font-weight:700;font-size:.9rem;
-  border:2px solid var(--ink);background:var(--paper);cursor:pointer;user-select:none;
-}
-.quote .pill input:checked+span{background:var(--ember);border-color:var(--ember);color:var(--cream)}
-.quote .pill input:focus-visible+span{outline:3px solid var(--ember);outline-offset:2px}
-.quote .pill span:hover{background:var(--paper-deep)}
-.form-foot{display:flex;align-items:center;gap:22px;flex-wrap:wrap;padding-top:8px}
-.form-foot .btn{cursor:pointer;font:inherit;font-weight:900;color:var(--cream)}
-.form-foot .fineprint{font-size:.85rem;color:#6b5744;max-width:40ch;margin:0}
+.quote input::placeholder,.quote textarea::placeholder{color:#a08c78}
+.quote input:focus,.quote select:focus,.quote textarea:focus{outline:3px solid var(--ember);outline-offset:2px;border-color:var(--ink)}
+.quote fieldset{border:2px solid #7a6350;padding:14px 16px 16px;display:grid;gap:12px}
+.quote legend{font-weight:900;padding:0 8px;font-size:.92rem}
+.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px 18px}
+.quote .inline{flex-direction:row;align-items:center;gap:10px;font-weight:600;font-size:.95rem}
+.quote .inline input{width:20px;height:20px;padding:0;accent-color:var(--ember);flex:none}
+.quote fieldset > label:not(.inline){margin-top:4px}
+.fsubmit{padding-top:24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.quote .btn{cursor:pointer;font:inherit;font-weight:900;color:var(--cream);border-color:var(--ember)}
+.fnote{font-size:.85rem;color:#7a6350;max-width:34ch}
 .cater-how .cta-row{display:flex;gap:16px;flex-wrap:wrap}
 .cater-how .btn{color:var(--cream)}
 
