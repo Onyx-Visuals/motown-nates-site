@@ -58,7 +58,22 @@ img{max-width:100%;display:block}
   overflow:hidden;
   padding:72px 0 96px;
 }
-.hero .wrap{position:relative;z-index:2}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+.hero .snap{
+  width:min(100%,410px);
+  border:4px solid var(--cream);
+  box-shadow:8px 8px 0 var(--ember);
+  transform:rotate(1.5deg);
+  background:var(--cream);
+  padding:8px 8px 14px;
+  justify-self:end;
+}
+.hero .snap img{width:100%;aspect-ratio:826/482;object-fit:cover}
+.hero .snap figcaption{color:var(--pit);font-weight:900;font-size:.85rem;margin-top:8px}
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr}
+  .hero .snap{justify-self:start;margin-top:12px;transform:rotate(-1deg)}
+}
 .hero h1{
   font-family:'Alfa Slab One',serif;
   font-weight:400;
@@ -259,18 +274,24 @@ footer a{color:var(--cream)}
     <path d="M360 380 C 348 340, 388 310, 370 265 C 352 225, 392 190, 378 140"/>
   </svg>
   <div class="wrap">
-    <h1>MOTOWN<span>NATE'S</span></h1>
-    <p class="lede">Detroit-style BBQ, smoked curbside out of a vintage Airstream at the top of Michigan.</p>
-    <ul class="facts">
-      <li>830 Ashmun St, Sault Ste. Marie</li>
-      <li>Mon&ndash;Fri 11&ndash;7</li>
-      <li>906-748-4892</li>
-      <li>Dog friendly</li>
-    </ul>
-    <div class="cta-row">
-      <a class="btn fire" href="#menu">See the Menu</a>
-      <a class="btn" href="#find">Get Directions</a>
+    <div>
+      <h1>MOTOWN<span>NATE'S</span></h1>
+      <p class="lede">Detroit-style BBQ, smoked curbside out of a vintage Airstream at the top of Michigan.</p>
+      <ul class="facts">
+        <li>830 Ashmun St, Sault Ste. Marie</li>
+        <li>Mon&ndash;Fri 11&ndash;7</li>
+        <li>906-748-4892</li>
+        <li>Dog friendly</li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn fire" href="#menu">See the Menu</a>
+        <a class="btn" href="#find">Get Directions</a>
+      </div>
     </div>
+    <figure class="snap">
+      <img src="img/airstream.jpg" alt="The Motown Nate's vintage Airstream under a red and white striped awning with the order counter and a Coca-Cola cooler">
+      <figcaption>The Airstream, 830 Ashmun St</figcaption>
+    </figure>
   </div>
 </div>
 
