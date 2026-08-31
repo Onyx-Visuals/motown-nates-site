@@ -134,21 +134,21 @@ img{max-width:100%;display:block}
 .btn.fire{background:var(--ember);border-color:var(--ember)}
 .btn.fire:hover{background:var(--mustard);border-color:var(--mustard);color:var(--pit)}
 
-/* smoke */
-.smoke{position:absolute;right:6%;top:24px;width:min(30vw,300px);z-index:1;pointer-events:none}
+/* smoke rising off the camper photo */
+.hero .snap{position:relative}
+.smoke{position:absolute;left:12%;bottom:86%;width:76%;z-index:0;pointer-events:none;transform:rotate(-1.5deg)}
 .smoke .puff{fill:var(--smoke);opacity:0}
 @media (prefers-reduced-motion:no-preference){
   .smoke .puff{animation:rise 7s ease-out infinite}
   .smoke .p2{animation-delay:2.3s}
   .smoke .p3{animation-delay:4.6s}
   @keyframes rise{
-    0%{transform:translateY(60px) scale(.7);opacity:0}
-    20%{opacity:.5}
-    100%{transform:translateY(-120px) scale(1.25);opacity:0}
+    0%{transform:translateY(70px) scale(.6);opacity:0}
+    25%{opacity:.7}
+    100%{transform:translateY(-110px) scale(1.2);opacity:0}
   }
 }
 @media (prefers-reduced-motion:reduce){.smoke .puff{opacity:.35}.smoke .p2{opacity:.25}.smoke .p3{opacity:.15}}
-@media (max-width:860px){.smoke{right:12px;top:12px;width:120px}}
 
 /* ---------- section scaffolding ---------- */
 section{padding:80px 0}
@@ -349,13 +349,17 @@ footer{
 }
 footer::before{
   content:"";position:absolute;left:50%;bottom:-10px;
-  width:320px;height:300px;margin-left:-360px;
+  width:300px;height:calc(100% - 24px);margin-left:-380px;top:12px;bottom:auto;
   background:url(img/teepee-frame.svg) no-repeat center bottom/contain;
   opacity:.55;pointer-events:none;
 }
-@media (max-width:760px){footer::before{width:200px;height:190px;left:0;margin-left:-40px;opacity:.35}}
+@media (max-width:760px){footer::before{left:0;margin-left:-60px;width:220px;opacity:.35}}
 footer .wrap{position:relative}
 footer .wrap{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
 .foot-logo{width:140px;height:140px}
+.nav{display:flex;gap:10px;flex-wrap:wrap}
+.nav a{display:inline-block;text-decoration:none;font-weight:900;font-size:.9rem;letter-spacing:.02em;padding:9px 16px;border:3px solid var(--cream);color:var(--cream)}
+.nav a:hover{background:var(--mustard);border-color:var(--mustard);color:var(--pit)}
+.nav a[aria-current="page"]{background:var(--ember);border-color:var(--ember);color:var(--cream)}
 .foot-nav{justify-content:center}
 footer a{color:var(--cream)}
