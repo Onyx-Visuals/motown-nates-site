@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Teepee — Motown Nate's</title>
+<meta name="description" content="Outdoor dining in a teepee around a guitar-shaped campfire at Motown Nate's in Sault Ste. Marie, MI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Libre+Franklin:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="wordmark-sm" href="index.html">MOTOWN NATE'S</a>
+    <div class="info"><span>Mon&ndash;Fri 11am&ndash;7pm</span><a href="tel:9067484892">906-748-4892</a></div>
+    <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><span></span></button>
+  </div>
+  <nav class="menu-panel" id="site-menu" data-open="false" aria-label="Site">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="teepee.html" aria-current="page">The Teepee</a></li>
+      <li><a href="find-us.html">Find Us</a></li>
+      <li class="small">800 Ashmun St, Sault Ste. Marie, MI &middot; <a href="tel:9067484892" style="display:inline;padding:0;border:0;font:inherit;color:var(--cream)">906-748-4892</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<div class="banner"><div class="wrap"><h1>Eat in the Teepee</h1><p>Outdoor dining you won't find anywhere else in the Soo.</p></div></div>
+<section class="place" id="place">
+  <div class="wrap">
+    <div class="place-photo">
+      <figure class="snap">
+        <img src="img/teepee.jpg" alt="Teepee poles beside the silver camper food truck and red umbrellas at Motown Nate's">
+        <figcaption>The teepee, the camper, and the fire pit at 800 Ashmun St</figcaption>
+      </figure>
+    </div>
+    <div class="place-grid">
+      <article>
+        <h3>Teepee Seating</h3>
+        <p>Dine inside the teepee around a guitar-shaped campfire stove. Cozy on chilly evenings, shaded in summer.</p>
+      </article>
+      <article>
+        <h3>Picnic Tables</h3>
+        <p>Plenty of outdoor tables under cover for sunny days, groups, and quick lunches.</p>
+      </article>
+      <article>
+        <h3>Dogs Welcome</h3>
+        <p>Water dishes come out for four-legged guests. Bring the whole pack.</p>
+      </article>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© Motown Nate's · Sault Ste. Marie, Michigan</div>
+    <div>Detroit is everywhere.</div>
+  </div>
+</footer>
+<script>
+(function(){
+  var b=document.querySelector('.burger'),p=document.getElementById('site-menu');
+  b.addEventListener('click',function(){
+    var open=b.getAttribute('aria-expanded')==='true';
+    b.setAttribute('aria-expanded',String(!open));
+    b.setAttribute('aria-label',open?'Open menu':'Close menu');
+    p.setAttribute('data-open',String(!open));
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&b.getAttribute('aria-expanded')==='true'){b.click();b.focus();}});
+})();
+</script>
+</body>
+</html>

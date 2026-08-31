@@ -8,263 +8,24 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Libre+Franklin:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
-<style>
-:root{
-  --pit:#1d1310;
-  --ember:#d8451f;
-  --mustard:#efa829;
-  --paper:#efdfc0;
-  --paper-deep:#e4cfa5;
-  --smoke:#8a7462;
-  --cream:#f6e9d2;
-  --ink:#2a1d15;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  font-family:'Libre Franklin',sans-serif;
-  background:var(--paper);
-  color:var(--ink);
-  line-height:1.6;
-  font-size:17px;
-}
-a{color:inherit}
-a:focus-visible,button:focus-visible{outline:3px solid var(--ember);outline-offset:3px}
-img{max-width:100%;display:block}
-.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
-
-/* ---------- top bar ---------- */
-.topbar{
-  background:var(--pit);
-  color:var(--cream);
-  font-weight:700;
-  font-size:.95rem;
-  border-bottom:4px solid var(--ember);
-}
-.topbar .wrap{
-  display:flex;justify-content:space-between;align-items:center;
-  padding-top:14px;padding-bottom:14px;gap:16px;flex-wrap:wrap;
-}
-.topbar nav{display:flex;gap:22px;flex-wrap:wrap}
-.topbar a{text-decoration:none}
-.topbar a:hover{color:var(--mustard)}
-.wordmark-sm{font-family:'Alfa Slab One',serif;font-size:1.05rem;letter-spacing:.02em;color:var(--mustard)}
-
-/* ---------- hero ---------- */
-.hero{
-  background:var(--pit);
-  color:var(--cream);
-  position:relative;
-  overflow:hidden;
-  padding:72px 0 96px;
-}
-.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
-.hero .snap{
-  width:min(100%,410px);
-  border:4px solid var(--cream);
-  box-shadow:8px 8px 0 var(--ember);
-  transform:rotate(1.5deg);
-  background:var(--cream);
-  padding:8px 8px 14px;
-  justify-self:end;
-}
-.hero .snap img{width:100%;aspect-ratio:826/482;object-fit:cover}
-.hero .snap figcaption{color:var(--pit);font-weight:900;font-size:.85rem;margin-top:8px}
-@media (max-width:860px){
-  .hero .wrap{grid-template-columns:1fr}
-  .hero .snap{justify-self:start;margin-top:12px;transform:rotate(-1deg)}
-}
-.hero h1{
-  font-family:'Alfa Slab One',serif;
-  font-weight:400;
-  font-size:clamp(3.2rem,11vw,8.5rem);
-  line-height:.92;
-  color:var(--cream);
-  text-shadow:5px 5px 0 var(--ember);
-}
-.hero h1 span{display:block;color:var(--mustard);text-shadow:5px 5px 0 rgba(216,69,31,.55)}
-.hero .lede{
-  margin-top:28px;
-  font-size:clamp(1.05rem,2.4vw,1.35rem);
-  max-width:34ch;
-  font-weight:500;
-}
-.hero .facts{
-  margin-top:34px;
-  display:flex;gap:28px;flex-wrap:wrap;
-  font-size:.95rem;font-weight:700;color:var(--mustard);
-}
-.hero .facts li{list-style:none}
-.hero .cta-row{margin-top:38px;display:flex;gap:16px;flex-wrap:wrap}
-.btn{
-  display:inline-block;
-  font-weight:900;
-  text-decoration:none;
-  padding:15px 30px;
-  border:3px solid var(--cream);
-  color:var(--cream);
-  letter-spacing:.02em;
-}
-.btn:hover{background:var(--cream);color:var(--pit)}
-.btn.fire{background:var(--ember);border-color:var(--ember)}
-.btn.fire:hover{background:var(--mustard);border-color:var(--mustard);color:var(--pit)}
-
-/* smoke */
-.smoke{position:absolute;top:-30px;right:-40px;width:min(46vw,520px);z-index:1;opacity:.5}
-.smoke path{fill:none;stroke:var(--smoke);stroke-width:3;stroke-linecap:round}
-@media (prefers-reduced-motion:no-preference){
-  .smoke path{
-    stroke-dasharray:600;stroke-dashoffset:600;
-    animation:drift 6s ease-out forwards;
-  }
-  .smoke path:nth-child(2){animation-delay:.7s}
-  .smoke path:nth-child(3){animation-delay:1.4s}
-  @keyframes drift{to{stroke-dashoffset:0}}
-}
-
-/* ---------- section scaffolding ---------- */
-section{padding:80px 0}
-.kicker{
-  font-family:'Alfa Slab One',serif;
-  font-weight:400;
-  font-size:clamp(2rem,5vw,3.2rem);
-  line-height:1.05;
-  color:var(--ink);
-  margin-bottom:14px;
-}
-.sub{max-width:58ch;font-size:1.08rem}
-
-/* ---------- menu board ---------- */
-.menu{background:var(--paper)}
-.board{
-  margin-top:44px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:48px 64px;
-}
-.board h3{
-  font-family:'Alfa Slab One',serif;
-  font-weight:400;
-  font-size:1.35rem;
-  color:var(--ember);
-  border-bottom:3px solid var(--ink);
-  padding-bottom:8px;
-  margin-bottom:18px;
-}
-.board dl div{margin-bottom:16px}
-.board dt{display:flex;align-items:baseline;gap:10px;font-size:1.02rem}
-.board dt .n{font-weight:900}
-.board dt .l{flex:1;border-bottom:3px dotted #b39a72;transform:translateY(-4px);min-width:24px}
-.board dt .p{font-weight:900;color:var(--ember)}
-.board dd{font-size:.92rem;color:#4c3a2c}
-.board .fine{font-size:.85rem;color:#6b5744;margin-top:6px}
-.board .n em{font-style:normal;font-size:.7rem;font-weight:900;color:var(--paper);background:var(--ember);padding:2px 6px;vertical-align:2px}
-.disclaimer{margin-top:40px;font-size:.8rem;color:#6b5744;max-width:60ch}
-.menu-note{
-  margin-top:44px;
-  background:var(--pit);color:var(--cream);
-  padding:22px 28px;
-  font-weight:700;
-  border-left:8px solid var(--mustard);
-  max-width:640px;
-}
-
-/* ---------- gallery ---------- */
-.gallery{background:var(--paper-deep);padding-top:64px;padding-bottom:64px}
-.shots{
-  margin-top:36px;
-  display:grid;
-  grid-template-columns:repeat(6,1fr);
-  gap:22px;
-}
-.shots figure{border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ember);background:var(--paper)}
-.shots img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
-.shots figcaption{padding:10px 14px;font-weight:900;font-size:.9rem}
-.shots figure{display:flex;flex-direction:column}
-.shots img{flex:1}
-.shots .s2{grid-column:span 2}
-.shots .s3{grid-column:span 3}
-@media (max-width:720px){.shots{grid-template-columns:1fr 1fr}.shots .s2,.shots .s3{grid-column:span 2}}
-
-/* ---------- teepee / place ---------- */
-.place{background:var(--pit);color:var(--cream)}
-.place .kicker{color:var(--mustard)}
-.place .sub{color:var(--cream)}
-.place-grid{
-  margin-top:44px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:2px;
-  background:var(--smoke);
-  border:2px solid var(--smoke);
-}
-.place-grid article{background:var(--pit);padding:28px 24px}
-.place-grid h3{
-  font-family:'Alfa Slab One',serif;font-weight:400;
-  font-size:1.1rem;color:var(--ember);margin-bottom:10px;
-}
-.place-grid p{font-size:.95rem;color:#d8c6ab}
-
-/* ---------- reviews ---------- */
-.reviews{background:var(--paper-deep)}
-.quotes{
-  margin-top:44px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:28px;
-}
-.quotes blockquote{
-  background:var(--paper);
-  border:3px solid var(--ink);
-  box-shadow:6px 6px 0 var(--ember);
-  padding:26px 24px 20px;
-  font-weight:500;
-  font-size:1.05rem;
-}
-.quotes cite{
-  display:block;margin-top:14px;
-  font-style:normal;font-weight:900;font-size:.85rem;color:var(--ember);
-}
-.stars{color:var(--ember);letter-spacing:2px;font-size:.9rem;margin-bottom:8px}
-
-/* ---------- find us ---------- */
-.find{background:var(--paper)}
-.find-grid{
-  margin-top:44px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:56px;
-}
-.find h3{
-  font-family:'Alfa Slab One',serif;font-weight:400;
-  font-size:1.2rem;color:var(--ember);margin-bottom:12px;
-}
-.find p{margin-bottom:18px}
-.find strong{font-weight:900}
-@media (max-width:720px){.find-grid{grid-template-columns:1fr}}
-
-/* ---------- footer ---------- */
-footer{
-  background:var(--pit);color:var(--smoke);
-  padding:36px 0;font-size:.9rem;
-  border-top:4px solid var(--ember);
-}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-footer a{color:var(--cream)}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header class="topbar">
   <div class="wrap">
-    <div class="wordmark-sm">MOTOWN NATE'S</div>
-    <nav aria-label="Main">
-      <a href="#menu">Menu</a>
-      <a href="#place">The Teepee</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#find">Find Us</a>
-    </nav>
+    <a class="wordmark-sm" href="index.html">MOTOWN NATE'S</a>
+    <div class="info"><span>Mon&ndash;Fri 11am&ndash;7pm</span><a href="tel:9067484892">906-748-4892</a></div>
+    <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><span></span></button>
   </div>
+  <nav class="menu-panel" id="site-menu" data-open="false" aria-label="Site">
+    <ul>
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="teepee.html">The Teepee</a></li>
+      <li><a href="find-us.html">Find Us</a></li>
+      <li class="small">800 Ashmun St, Sault Ste. Marie, MI &middot; <a href="tel:9067484892" style="display:inline;padding:0;border:0;font:inherit;color:var(--cream)">906-748-4892</a></li>
+    </ul>
+  </nav>
 </header>
 
 <main>
@@ -285,8 +46,8 @@ footer a{color:var(--cream)}
         <li>Dog friendly</li>
       </ul>
       <div class="cta-row">
-        <a class="btn fire" href="#menu">See the Menu</a>
-        <a class="btn" href="#find">Get Directions</a>
+        <a class="btn fire" href="menu.html">See the Menu</a>
+        <a class="btn" href="find-us.html">Get Directions</a>
       </div>
     </div>
     <figure class="snap">
@@ -296,81 +57,6 @@ footer a{color:var(--cream)}
   </div>
 </div>
 
-<section class="menu" id="menu">
-  <div class="wrap">
-    <h2 class="kicker">The Menu</h2>
-    <p class="sub">Everything is made to order. The smoker runs right on the street and the fries are cut by hand. Customize any item at the counter or the kiosk.</p>
-    <div class="board">
-      <div>
-        <h3>Off the Smoker</h3>
-        <dl>
-          <div><dt><span class="n">BBQ Smoked Beef Brisket Sandwich</span><span class="l"></span><span class="p">16</span></dt><dd>Pickles, red onion and BBQ sauce on a brioche. Served with chips.</dd></div>
-          <div><dt><span class="n">BBQ Smoked Pulled Pork Sandwich</span><span class="l"></span><span class="p">12</span></dt><dd>Pickles, red onion and BBQ sauce on sourdough. Served with chips.</dd></div>
-          <div><dt><span class="n">Texas Style Loaded Fries</span><span class="l"></span><span class="p">16</span></dt><dd>Brisket, cheese, chipotle &amp; sour cream, diced tomato, jalapeno, onion.</dd></div>
-          <div><dt><span class="n">Loaded Mac n' Cheese <em>NEW</em></span><span class="l"></span><span class="p">12</span></dt><dd>Choice of pulled pork or brisket (+$3), BBQ sauce over mac n' cheese.</dd></div>
-        </dl>
-        <p class="fine">Upgrade any sandwich side for $3: hand-cut fries, waffle fries, mac n' cheese, or onion rings.</p>
-      </div>
-      <div>
-        <h3>Tacos, Burritos &amp; Bowls</h3>
-        <dl>
-          <div><dt><span class="n">Street Tacos</span><span class="l"></span><span class="p">11</span></dt><dd>4 corn tortillas, ground beef, cheese, chipotle &amp; sour cream, romaine, onion, pico.</dd></div>
-          <div><dt><span class="n">Smoked Brisket Tacos</span><span class="l"></span><span class="p">15</span></dt><dd>4 corn tortillas, cheese, chipotle &amp; sour cream, romaine, onion, pico.</dd></div>
-          <div><dt><span class="n">Smoked Carnitas Tacos</span><span class="l"></span><span class="p">12</span></dt><dd>4 corn tortillas, cheese, chipotle &amp; sour cream, romaine, onion, pico.</dd></div>
-          <div><dt><span class="n">Breakfast Tacos</span><span class="l"></span><span class="p">10</span></dt><dd>4 corn tortillas, bacon, egg, cheese, chipotle sour cream, romaine, onion, pico.</dd></div>
-          <div><dt><span class="n">The Bad Hombre</span><span class="l"></span><span class="p">14</span></dt><dd>Loaded BBQ burrito with black beans, cheese, cilantro, chipotle cream, sour cream, pico, raw onions. Choice of pulled pork, ground beef, chicken or brisket (+$3). Extra meat +$3.</dd></div>
-          <div><dt><span class="n">BBQ Loaded Rice Bowl</span><span class="l"></span><span class="p">12</span></dt><dd>Pulled pork or brisket (+$3) or chicken, black beans, pico, chipotle cream, sour cream, raw onion, cilantro. Add cheese $1.</dd></div>
-          <div><dt><span class="n">Breakfast Burrito*</span><span class="l"></span><span class="p">11</span></dt><dd>Bacon (brisket +$3), lettuce, pico, fried egg, cheese, raw onion, potato, choice of sauce.</dd></div>
-        </dl>
-      </div>
-      <div>
-        <h3>Burgers &amp; Hot Dogs</h3>
-        <dl>
-          <div><dt><span class="n">Detroit Style Coney Island</span><span class="l"></span><span class="p">4</span></dt><dd>Chili, mustard, onion.</dd></div>
-          <div><dt><span class="n">Nate Dog</span><span class="l"></span><span class="p">4</span></dt><dd>Choice of toppings.</dd></div>
-          <div><dt><span class="n">Good Old Fashioned Hamburgers*</span><span class="l"></span><span class="p">6</span></dt><dd>Grilled onion, pickle, mustard, ketchup on a steamed bun.</dd></div>
-          <div><dt><span class="n">Little Heavy*</span><span class="l"></span><span class="p">10</span></dt><dd>Chef style single hamburger on an original sourdough roll, choice of toppings.</dd></div>
-          <div><dt><span class="n">The Big Heavy*</span><span class="l"></span><span class="p">12</span></dt><dd>Chef style double hamburger on a sourdough roll, choice of toppings.</dd></div>
-          <div><dt><span class="n">Mushroom Swiss Burger*</span><span class="l"></span><span class="p">12</span></dt><dd>Grilled onion, grilled mushrooms &amp; Swiss cheese.</dd></div>
-        </dl>
-      </div>
-      <div>
-        <h3>Main</h3>
-        <dl>
-          <div><dt><span class="n">Gyro</span><span class="l"></span><span class="p">12</span></dt><dd>Romaine lettuce, tzatziki, tomato, red onion.</dd></div>
-          <div><dt><span class="n">Love Me Tender Poutine</span><span class="l"></span><span class="p">12</span></dt><dd>Slow roasted beef gravy and mozzarella cheese.</dd></div>
-          <div><dt><span class="n">Chili Fries</span><span class="l"></span><span class="p">11</span></dt><dd>Hand-cut fries and Detroit chili sauce. Add cheese $1.</dd></div>
-          <div><dt><span class="n">Loaded Fries</span><span class="l"></span><span class="p">12</span></dt><dd>Ground beef, cheese, chipotle &amp; sour cream, diced tomato, jalapeno, onion.</dd></div>
-          <div><dt><span class="n">Macho Nachos</span><span class="l"></span><span class="p">12</span></dt><dd>Ground beef, cheese, chipotle &amp; sour cream, diced tomato, jalapeno, onion.</dd></div>
-          <div><dt><span class="n">BLT</span><span class="l"></span><span class="p">11</span></dt><dd>Hickory smoked bacon, lettuce, tomato and mayo on a brioche.</dd></div>
-          <div><dt><span class="n">Big Boss Man Breakfast Sandwich*</span><span class="l"></span><span class="p">11</span></dt><dd>Bacon, lettuce, tomato, fried egg, cheese, onion, mayo.</dd></div>
-          <div><dt><span class="n">Tony Soprano's Meatball Sub</span><span class="l"></span><span class="p">12</span></dt><dd>Garlic toasted Amoroso's roll, marinara, mozzarella, parmesan.</dd></div>
-        </dl>
-      </div>
-      <div>
-        <h3>Sides</h3>
-        <dl>
-          <div><dt><span class="n">Giant Hand-Cut French Fries</span><span class="l"></span><span class="p">7</span></dt></div>
-          <div><dt><span class="n">Beer Battered Onion Rings</span><span class="l"></span><span class="p">7</span></dt></div>
-          <div><dt><span class="n">Ribbon Fries</span><span class="l"></span><span class="p">6</span></dt><dd>Thin sliced spiral cut potatoes.</dd></div>
-          <div><dt><span class="n">Waffle Fries</span><span class="l"></span><span class="p">6</span></dt></div>
-          <div><dt><span class="n">Mac and Cheese</span><span class="l"></span><span class="p">4</span></dt></div>
-          <div><dt><span class="n">Premium Dipping Sauces</span><span class="l"></span><span class="p">1</span></dt><dd>Chipotle cream, Mexican ketchup, beef gravy, ranch, tzatziki.</dd></div>
-          <div><dt><span class="n">&frac12; Spaghetti &amp; a Meatball</span><span class="l"></span><span class="p">7</span></dt><dd>Handmade meatball and slow cooked red sauce, garlic bread.</dd></div>
-        </dl>
-      </div>
-      <div>
-        <h3>Pasta</h3>
-        <dl>
-          <div><dt><span class="n">1920 Vintage Spaghetti &amp; Meatballs</span><span class="l"></span><span class="p">15</span></dt><dd>Handmade meatballs and slow cooked red sauce.</dd></div>
-          <div><dt><span class="n">Spaghetti &amp; Meat Sauce</span><span class="l"></span><span class="p">11</span></dt><dd>Pasta with meat sauce.</dd></div>
-        </dl>
-        <p class="fine">All pasta served with garlic bread.</p>
-      </div>
-    </div>
-    <p class="disclaimer">* Consuming raw or uncooked meats or eggs may increase your risk of foodborne illness.</p>
-  </div>
-</section>
 
 <section class="gallery" aria-label="Food photos">
   <div class="wrap">
@@ -381,27 +67,6 @@ footer a{color:var(--cream)}
       <figure class="s2"><img src="img/brisket-sandwich.jpg" alt="BBQ brisket sandwich with pickles and onion on a brioche bun"><figcaption>BBQ brisket sandwich</figcaption></figure>
       <figure class="s2"><img src="img/gyro.jpg" alt="Gyro wrapped in foil with tzatziki, tomato, and red onion, fries on the side"><figcaption>Gyro</figcaption></figure>
       <figure class="s2"><img src="img/tacos-plate.jpg" alt="Platter of carnitas tacos with onion and cilantro"><figcaption>Smoked carnitas tacos</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<section class="place" id="place">
-  <div class="wrap">
-    <h2 class="kicker">Eat in the Teepee</h2>
-    <p class="sub">Motown Nate's is a food truck built from a vintage silver camper, with an outdoor dining setup you won't find anywhere else in the Soo.</p>
-    <div class="place-grid">
-      <article>
-        <h3>Teepee Seating</h3>
-        <p>Dine inside the teepee around a guitar-shaped campfire stove. Cozy on chilly evenings, shaded in summer.</p>
-      </article>
-      <article>
-        <h3>Picnic Tables</h3>
-        <p>Plenty of outdoor tables under cover for sunny days, groups, and quick lunches.</p>
-      </article>
-      <article>
-        <h3>Dogs Welcome</h3>
-        <p>Water dishes come out for four-legged guests. Bring the whole pack.</p>
-      </article>
     </div>
   </div>
 </section>
@@ -434,26 +99,6 @@ footer a{color:var(--cream)}
     </div>
   </div>
 </section>
-
-<section class="find" id="find">
-  <div class="wrap">
-    <h2 class="kicker">Find Us</h2>
-    <div class="find-grid">
-      <div>
-        <h3>Location</h3>
-        <p><strong>800 Ashmun St</strong><br>Sault Ste. Marie, MI 49783<br>A short walk from downtown and the Soo Locks.</p>
-        <h3>Hours</h3>
-        <p><strong>Monday&ndash;Friday, 11am&ndash;7pm</strong><br>Open seasonally. Don't wait for winter.</p>
-      </div>
-      <div>
-        <h3>Ordering</h3>
-        <p>Call <strong><a href="tel:9067484892">906-748-4892</a></strong>, order at the counter or the kiosk. Every item can be customized. Delivery available through <strong>DoorDash</strong>.</p>
-        <h3>Groups &amp; Catering</h3>
-        <p>Feeding a work crew or a family reunion? Call ahead and we'll have it ready.</p>
-      </div>
-    </div>
-  </div>
-</section>
 </main>
 
 <footer>
@@ -462,6 +107,17 @@ footer a{color:var(--cream)}
     <div>Detroit is everywhere.</div>
   </div>
 </footer>
-
+<script>
+(function(){
+  var b=document.querySelector('.burger'),p=document.getElementById('site-menu');
+  b.addEventListener('click',function(){
+    var open=b.getAttribute('aria-expanded')==='true';
+    b.setAttribute('aria-expanded',String(!open));
+    b.setAttribute('aria-label',open?'Open menu':'Close menu');
+    p.setAttribute('data-open',String(!open));
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&b.getAttribute('aria-expanded')==='true'){b.click();b.focus();}});
+})();
+</script>
 </body>
 </html>
