@@ -200,10 +200,7 @@ section{padding:80px 0}
 
 /* ---------- menu page (dark board with photo badges) ---------- */
 .menu-page{background:var(--pit);color:var(--cream)}
-.menu-page .edge{height:80px;background:no-repeat center/100% 100%}
-.menu-page .edge-top{background-image:url(img/edge-top.svg)}
-.menu-page .edge-bottom{background-image:url(img/edge-bottom.svg)}
-.menu-page .menu{background:var(--pit);padding:40px 0 60px}
+.menu-page .menu{background:var(--pit);padding:64px 0 80px}
 .menu-title{font-family:'Alfa Slab One',serif;font-weight:400;text-align:center;font-size:clamp(2.6rem,7vw,4.6rem);line-height:1;color:var(--cream);text-shadow:4px 4px 0 var(--ember)}
 .menu-sub{text-align:center;color:#d8c6ab;max-width:52ch;margin:16px auto 0}
 .menu-layout{display:grid;grid-template-columns:200px 1fr 200px;gap:40px;margin-top:48px;align-items:start}
