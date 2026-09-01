@@ -222,8 +222,7 @@ section{padding:80px 0}
 @media (max-width:1000px){
   .menu-layout{grid-template-columns:1fr;margin-top:32px}
   .pics{display:none}
-  .pics-mobile{display:none}
-  .pics-mobile .pic{width:22%;max-width:110px}
+  .pics-mobile{display:flex;justify-content:center;gap:12px;margin-top:32px}
   .pics-mobile .pic{clip-path:none;background:none;width:21%;max-width:100px}
   .pics-mobile .pic .ring{width:100%;border-width:3px;padding:3px}
   .menu-page .board dt .n{letter-spacing:0;font-size:.95rem}
