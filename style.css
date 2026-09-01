@@ -72,7 +72,7 @@ img{max-width:100%;display:block}
 }
 .menu-panel a:hover{background:var(--mustard);border-color:var(--mustard);color:var(--pit)}
 .menu-panel a[aria-current="page"]{background:var(--ember);border-color:var(--ember);color:var(--cream)}
-@media (max-width:480px){.menu-panel{right:12px;width:calc(100% - 24px)}}
+@media (max-width:480px){.menu-panel{right:16px}}
 
 /* ---------- page banner (inner pages) ---------- */
 .banner{background:var(--pit);color:var(--cream);padding:56px 0 48px;border-bottom:4px solid var(--ember)}
