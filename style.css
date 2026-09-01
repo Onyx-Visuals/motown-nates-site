@@ -369,6 +369,11 @@ footer .wrap{display:flex;flex-direction:column;align-items:center;gap:16px;text
 .nav a{display:inline-block;text-decoration:none;font-weight:900;font-size:.9rem;letter-spacing:.02em;padding:9px 16px;border:3px solid var(--cream);color:var(--cream)}
 .nav a:hover{background:var(--mustard);border-color:var(--mustard);color:var(--pit)}
 .nav a[aria-current="page"]{background:var(--ember);border-color:var(--ember);color:var(--cream)}
+.foot-contact{font-weight:700;color:var(--cream)}
+.foot-contact a{text-decoration:none}
+.foot-contact a:hover{color:var(--mustard)}
+.cater-note a{color:var(--mustard);text-decoration:none}
+.cater-note a:hover{text-decoration:underline}
 .foot-nav{justify-content:center}
 .foot-nav a{font-size:.8rem;padding:7px 12px;border-width:2px}
 @media (max-width:640px){
