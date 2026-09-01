@@ -125,6 +125,7 @@
     var open=d.open===true, note=(d.note||'').trim();
     el.className='season '+(open?'is-open':'is-closed');
     el.textContent=open?(note||'Open for the season. Mon\u2013Fri 11am\u20137pm at 800 Ashmun St.'):(note||'Closed for the season. Back when the weather warms up.');
+    el.innerHTML=el.innerHTML.replace('11am\u20137pm','<span style="white-space:nowrap">11am\u20137pm</span>');
     el.hidden=false;
     var ld=document.getElementById('ld-business');
     if(ld&&!open){try{var j=JSON.parse(ld.textContent);delete j.openingHoursSpecification;j.description='Closed for the season. Reopens in the warmer months.';ld.textContent=JSON.stringify(j);}catch(e){}}
