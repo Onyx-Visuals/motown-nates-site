@@ -218,9 +218,13 @@ section{padding:80px 0}
 .pic{width:200px;aspect-ratio:1;background:var(--cream);clip-path:polygon(100.0% 50.0%, 93.7% 54.9%, 98.7% 61.1%, 91.5% 64.5%, 95.0% 71.7%, 87.3% 73.4%, 89.1% 81.2%, 81.1% 81.1%, 81.2% 89.1%, 73.4% 87.3%, 71.7% 95.0%, 64.5% 91.5%, 61.1% 98.7%, 54.9% 93.7%, 50.0% 100.0%, 45.1% 93.7%, 38.9% 98.7%, 35.5% 91.5%, 28.3% 95.0%, 26.6% 87.3%, 18.8% 89.1%, 18.9% 81.1%, 10.9% 81.2%, 12.7% 73.4%, 5.0% 71.7%, 8.5% 64.5%, 1.3% 61.1%, 6.3% 54.9%, 0.0% 50.0%, 6.3% 45.1%, 1.3% 38.9%, 8.5% 35.5%, 5.0% 28.3%, 12.7% 26.6%, 10.9% 18.8%, 18.9% 18.9%, 18.8% 10.9%, 26.6% 12.7%, 28.3% 5.0%, 35.5% 8.5%, 38.9% 1.3%, 45.1% 6.3%, 50.0% 0.0%, 54.9% 6.3%, 61.1% 1.3%, 64.5% 8.5%, 71.7% 5.0%, 73.4% 12.7%, 81.2% 10.9%, 81.1% 18.9%, 89.1% 18.8%, 87.3% 26.6%, 95.0% 28.3%, 91.5% 35.5%, 98.7% 38.9%, 93.7% 45.1%);display:grid;place-items:center}
 .pic .ring{width:78%;aspect-ratio:1;border-radius:50%;border:3px solid var(--mustard);padding:4px;background:var(--pit)}
 .pic img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.pics-mobile{display:none}
 @media (max-width:1000px){
-  .menu-layout{grid-template-columns:1fr}
+  .menu-layout{grid-template-columns:1fr;margin-top:32px}
   .pics{display:none}
+  .pics-mobile{display:flex;justify-content:center;gap:14px;margin-top:32px}
+  .pics-mobile .pic{width:22%;max-width:110px}
+  .pics-mobile .pic .ring{width:80%;border-width:2px;padding:3px}
   .menu-page .board dt .n{letter-spacing:0;font-size:.95rem}
 }
 
