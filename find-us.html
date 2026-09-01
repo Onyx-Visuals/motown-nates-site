@@ -38,6 +38,7 @@
     </ul>
   </nav>
 </header>
+<div class="season" id="season" hidden role="status"></div>
 
 <main id="main">
 <div class="banner"><div class="wrap banner-split"><div><h1>Find Us</h1><p>Where we are, when we are open, and how to order.</p></div><img class="banner-logo" src="img/logo.svg" alt="" width="200" height="200"></div></div>
@@ -78,6 +79,13 @@
 
 <script>
 (function(){
+  fetch('status.json?'+Date.now()).then(function(r){return r.json();}).then(function(d){
+    var el=document.getElementById('season'); if(!el)return;
+    var open=d.open===true, note=(d.note||'').trim();
+    el.className='season '+(open?'is-open':'is-closed');
+    el.textContent=open?(note||'Open for the season. Mon\u2013Fri 11am\u20137pm at 800 Ashmun St.'):(note||'Closed for the season. Back when the weather warms up.');
+    el.hidden=false;
+  }).catch(function(){});
   var b=document.querySelector('.burger'),p=document.getElementById('site-menu');
   if(!b||!p)return;
   b.addEventListener('click',function(){
