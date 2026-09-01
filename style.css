@@ -324,7 +324,7 @@ section{padding:80px 0}
 .about-photo img{width:100%;aspect-ratio:814/462;object-fit:cover;border:3px solid var(--ink);box-sizing:border-box}
 .about-photo figcaption{color:var(--pit);font-weight:900;font-size:.85rem;margin-top:8px}
 
-.cater-main{margin-top:34px;width:min(100%,400px);border:4px solid var(--pit);box-shadow:8px 8px 0 var(--ember);transform:rotate(-1.5deg);background:var(--cream);padding:8px 8px 14px}
+.cater-main{margin-top:34px;width:min(100%,400px);border:4px solid var(--pit);box-shadow:8px 8px 0 var(--ember);transform:rotate(-1.5deg);background:var(--cream);padding:8px}
 .cater-main img{width:100%;aspect-ratio:4/3;}
 .cater-main:not(.cater-ribs) img{aspect-ratio:4/5;}
 .cater-ribs{width:min(100%,370px);transform:rotate(1.2deg)}
