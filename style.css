@@ -18,6 +18,8 @@ body{
   font-size:17px;
 }
 a{color:inherit}
+.skip{position:absolute;left:-999px;top:8px;background:var(--mustard);color:var(--pit);padding:10px 16px;font-weight:900;z-index:100}
+.skip:focus{left:8px}
 a:focus-visible,button:focus-visible{outline:3px solid var(--ember);outline-offset:3px}
 img{max-width:100%;display:block}
 .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
@@ -36,7 +38,7 @@ img{max-width:100%;display:block}
 .wordmark-sm{font-family:'Alfa Slab One',serif;font-size:1.05rem;letter-spacing:.02em;color:var(--mustard);text-decoration:none;display:flex;align-items:center;gap:10px}
 .wordmark-sm img{width:52px;height:52px}
 .topbar .info{font-weight:700;font-size:.9rem;color:var(--cream);display:flex;gap:18px;margin-left:auto;margin-right:8px}
-.topbar .info a{text-decoration:none}
+.topbar .info a{text-decoration:none;padding:10px 4px;display:inline-block}
 .topbar .info a:hover{color:var(--mustard)}
 @media (max-width:700px){.topbar .info{display:none}}
 .burger{
@@ -165,7 +167,7 @@ section{padding:80px 0}
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:48px 64px;
 }
-.board h3{
+.board h2{
   font-family:'Alfa Slab One',serif;
   font-weight:400;
   font-size:1.35rem;
@@ -183,14 +185,6 @@ section{padding:80px 0}
 .board .fine{font-size:.85rem;color:#6b5744;margin-top:6px}
 .board .n em{font-style:normal;font-size:.7rem;font-weight:900;color:var(--paper);background:var(--ember);padding:2px 6px;vertical-align:2px}
 .disclaimer{margin-top:40px;font-size:.8rem;color:#6b5744;max-width:60ch}
-.menu-note{
-  margin-top:44px;
-  background:var(--pit);color:var(--cream);
-  padding:22px 28px;
-  font-weight:700;
-  border-left:8px solid var(--mustard);
-  max-width:640px;
-}
 
 /* ---------- gallery ---------- */
 .gallery{background:var(--paper-deep);padding-top:64px;padding-bottom:64px}
@@ -209,29 +203,7 @@ section{padding:80px 0}
 .shots .s3{grid-column:span 3}
 @media (max-width:720px){.shots{grid-template-columns:1fr 1fr}.shots .s2,.shots .s3{grid-column:span 2}}
 
-/* ---------- teepee / place ---------- */
-.place{background:var(--pit);color:var(--cream)}
-.place .kicker{color:var(--mustard)}
-.place .sub{color:var(--cream)}
-.place-grid{
-  margin-top:44px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:2px;
-  background:var(--smoke);
-  border:2px solid var(--smoke);
-}
-.place-grid article{background:var(--pit);padding:28px 24px}
-.place-grid h3{
-  font-family:'Alfa Slab One',serif;font-weight:400;
-  font-size:1.1rem;color:var(--ember);margin-bottom:10px;
-}
-.place-grid p{font-size:.95rem;color:#d8c6ab}
 
-.place-photo{margin-bottom:44px}
-.place-photo .snap{width:min(100%,407px);border:4px solid var(--cream);box-shadow:8px 8px 0 var(--ember);transform:rotate(-1.5deg);background:var(--cream);padding:8px 8px 14px}
-.place-photo .snap img{width:100%;aspect-ratio:814/462;object-fit:cover}
-.place-photo .snap figcaption{color:var(--pit);font-weight:900;font-size:.85rem;margin-top:8px}
 
 .banner-split{display:flex;justify-content:space-between;align-items:center;gap:32px}
 .banner-logo{width:200px;height:200px;flex:none}
@@ -338,7 +310,7 @@ section{padding:80px 0}
   grid-template-columns:1fr 1fr;
   gap:56px;
 }
-.find h3{
+.find h2{
   font-family:'Alfa Slab One',serif;font-weight:400;
   font-size:1.2rem;color:var(--ember);margin-bottom:12px;
 }
@@ -370,9 +342,9 @@ footer .wrap{display:flex;flex-direction:column;align-items:center;gap:16px;text
 .nav a:hover{background:var(--mustard);border-color:var(--mustard);color:var(--pit)}
 .nav a[aria-current="page"]{background:var(--ember);border-color:var(--ember);color:var(--cream)}
 .foot-contact{font-weight:700;color:var(--cream)}
-.foot-contact a{text-decoration:none}
+.foot-contact a{text-decoration:none;display:inline-block;padding:10px 6px}
 .foot-contact a:hover{color:var(--mustard)}
-.cater-note a{color:var(--mustard);text-decoration:none}
+.cater-note a{color:var(--mustard);text-decoration:none;display:inline-block;padding:6px 0}
 .cater-note a:hover{text-decoration:underline}
 .foot-nav{justify-content:center}
 .foot-nav a{font-size:.8rem;padding:7px 12px;border-width:2px}

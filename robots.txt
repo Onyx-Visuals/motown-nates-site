@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /thanks.html
+Sitemap: https://onyx-visuals.github.io/motown-nates-site/sitemap.xml
