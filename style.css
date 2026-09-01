@@ -304,7 +304,7 @@ section{padding:80px 0}
 .chip:hover span{background:var(--mustard);border-color:var(--ink)}
 .chip input:checked + span{background:var(--ember);border-color:var(--ember);color:var(--cream)}
 .chip input:focus-visible + span{box-shadow:0 0 0 3px rgba(216,69,31,.35)}
-.quote fieldset > label:not(.inline){margin-top:6px}
+.quote fieldset > label:not(.chip){margin-top:6px}
 .fsubmit{padding-top:28px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
 .quote .btn{cursor:pointer;font:inherit;font-weight:900;font-size:1rem;padding:16px 34px;background:var(--ember);border:3px solid var(--ember);color:var(--cream)}
 .quote .btn:hover{background:var(--mustard);border-color:var(--mustard);color:var(--pit)}
@@ -332,7 +332,6 @@ section{padding:80px 0}
 .cater-ribs{width:min(100%,370px);transform:rotate(1.2deg)}
 .cater-main img{object-fit:cover;border:3px solid var(--ink);box-sizing:border-box}
 .cater-main figcaption{color:var(--pit);font-weight:900;font-size:.85rem;margin-top:8px}
-@media (max-width:480px){
 .find-photos{margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);gap:36px;align-items:start}
 .find-photos .fp{width:100%;max-width:400px;border:4px solid var(--pit);box-shadow:8px 8px 0 var(--ember);background:var(--cream);padding:8px 8px 14px;transform:rotate(-1.2deg)}
 .find-photos .fp:nth-child(2){transform:rotate(1.2deg)}
