@@ -1,6 +1,7 @@
 :root{
   --pit:#1d1310;
   --ember:#d8451f;
+  --ember-text:#b03216;
   --mustard:#efa829;
   --paper:#efdfc0;
   --paper-deep:#e4cfa5;
@@ -180,7 +181,7 @@ section{padding:80px 0}
 .board dt{display:flex;align-items:baseline;gap:10px;font-size:1.02rem}
 .board dt .n{font-weight:900}
 .board dt .l{flex:1;border-bottom:3px dotted #b39a72;transform:translateY(-4px);min-width:24px}
-.board dt .p{font-weight:900;color:var(--ember)}
+.board dt .p{font-weight:900;color:var(--ember-text)}
 .board dd{font-size:.92rem;color:#4c3a2c}
 .board .fine{font-size:.85rem;color:#6b5744;margin-top:6px}
 .board .n em{font-style:normal;font-size:.7rem;font-weight:900;color:var(--paper);background:var(--ember);padding:2px 6px;vertical-align:2px}
@@ -240,7 +241,7 @@ section{padding:80px 0}
 .quote .row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 @media (max-width:600px){.quote .row{grid-template-columns:1fr}.quote{padding:8px 20px 28px}}
 .quote label{display:flex;flex-direction:column;gap:7px;font-weight:700;font-size:.9rem;color:var(--ink)}
-.req{font-weight:500;color:#7a6350;font-size:.78rem;margin-left:6px}
+.req{font-weight:500;color:#6b5744;font-size:.78rem;margin-left:6px}
 .quote input,.quote select,.quote textarea{
   font:inherit;font-weight:500;font-size:1rem;padding:12px 14px;
   border:2px solid var(--ink);background:#fffdf8;color:var(--ink);border-radius:4px;
@@ -299,9 +300,9 @@ section{padding:80px 0}
 }
 .quotes cite{
   display:block;margin-top:14px;
-  font-style:normal;font-weight:900;font-size:.85rem;color:var(--ember);
+  font-style:normal;font-weight:900;font-size:.85rem;color:var(--ember-text);
 }
-.stars{color:var(--ember);letter-spacing:2px;font-size:.9rem;margin-bottom:8px}
+.stars{color:var(--ember-text);letter-spacing:2px;font-size:.9rem;margin-bottom:8px}
 
 /* ---------- find us ---------- */
 .find{background:var(--paper)}
