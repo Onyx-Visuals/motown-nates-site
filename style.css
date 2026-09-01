@@ -87,7 +87,7 @@ img{max-width:100%;display:block}
   font-family:'Libre Franklin',sans-serif;font-weight:700;font-size:1rem;line-height:1.35;
   padding:10px 20px;border:3px solid var(--cream);
 }
-.season.is-open{background:#2f7a3e;color:#fff}
+.season.is-open{background:#7fc57f;color:var(--pit);border-color:var(--pit)}
 .season.is-closed{background:var(--paper);color:var(--ink);border-color:var(--ink)}
 @media (max-width:760px){.season{width:min(100%,560px)}}
 
