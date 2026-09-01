@@ -66,7 +66,6 @@
     <a class="wordmark-sm" href="index.html"><img src="img/logo.svg" alt="" width="52" height="52">MOTOWN NATE'S</a>
     <div class="info"><a href="tel:9067484892">906-748-4892</a></div>
     <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><span></span></button>
-  </div>
   <nav class="menu-panel" id="site-menu" data-open="false" aria-label="Site">
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -76,6 +75,7 @@
       <li><a href="find-us.html">Find Us</a></li>
     </ul>
   </nav>
+  </div>
 </header>
 <div class="season-wrap"><div class="season" id="season" hidden role="status"></div></div>
 
@@ -258,6 +258,7 @@
     p.setAttribute('data-open',String(!open));
   });
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&b.getAttribute('aria-expanded')==='true'){b.click();b.focus();}});
+  document.addEventListener('click',function(e){if(b.getAttribute('aria-expanded')==='true'&&!p.contains(e.target)&&!b.contains(e.target)){b.click();}});
 })();
 </script>
 </body>
