@@ -58,21 +58,14 @@ img{max-width:100%;display:block}
 @media (prefers-reduced-motion:reduce){.burger span,.burger span::before,.burger span::after{transition:none}}
 .menu-panel{display:none;background:var(--pit);border-top:2px solid var(--smoke)}
 .menu-panel[data-open="true"]{display:block}
-.menu-panel ul{list-style:none;max-width:1060px;margin:0 auto;padding:18px 24px 20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.menu-panel ul{list-style:none;max-width:1060px;margin:0 auto;padding:14px 24px 18px;display:grid;gap:10px}
 .menu-panel a{
-  display:inline-block;text-decoration:none;
-  font-weight:900;font-size:.95rem;letter-spacing:.02em;
-  padding:11px 20px;border:3px solid var(--cream);color:var(--cream);
+  display:block;text-align:center;text-decoration:none;
+  font-weight:900;font-size:1rem;letter-spacing:.02em;
+  padding:13px 20px;border:3px solid var(--cream);color:var(--cream);
 }
 .menu-panel a:hover{background:var(--mustard);border-color:var(--mustard);color:var(--pit)}
 .menu-panel a[aria-current="page"]{background:var(--ember);border-color:var(--ember);color:var(--cream)}
-.menu-panel .small{font-size:.9rem;font-weight:700;color:var(--smoke);margin-left:auto}
-@media (max-width:640px){
-  .menu-panel ul{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-  .menu-panel a{display:block;text-align:center;font-size:1rem;padding:14px 8px}
-  .menu-panel .small{grid-column:1 / -1;margin:8px 0 0;text-align:center}
-  .menu-panel li:nth-child(5){grid-column:1 / -1}
-}
 
 /* ---------- page banner (inner pages) ---------- */
 .banner{background:var(--pit);color:var(--cream);padding:56px 0 48px;border-bottom:4px solid var(--ember)}
