@@ -17,6 +17,46 @@
 <meta name="twitter:card" content="summary">
 <link rel="icon" type="image/svg+xml" href="img/logo.svg">
 <link rel="icon" type="image/png" sizes="128x128" href="favicon.png">
+<script type="application/ld+json" id="ld-business">
+{
+ "@context": "https://schema.org",
+ "@type": "Restaurant",
+ "@id": "https://onyx-visuals.github.io/motown-nates-site/#business",
+ "name": "Motown Nate's",
+ "url": "https://onyx-visuals.github.io/motown-nates-site/",
+ "image": "https://onyx-visuals.github.io/motown-nates-site/img/logo-1200.png",
+ "telephone": "+1-906-748-4892",
+ "email": "motownnate@aol.com",
+ "servesCuisine": [
+  "Barbecue",
+  "American"
+ ],
+ "priceRange": "$",
+ "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "800 Ashmun St",
+  "addressLocality": "Sault Ste. Marie",
+  "addressRegion": "MI",
+  "postalCode": "49783",
+  "addressCountry": "US"
+ },
+ "hasMenu": "https://onyx-visuals.github.io/motown-nates-site/menu.html",
+ "openingHoursSpecification": [
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday"
+   ],
+   "opens": "11:00",
+   "closes": "19:00"
+  }
+ ]
+}
+</script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -86,6 +126,8 @@
     el.className='season '+(open?'is-open':'is-closed');
     el.textContent=open?(note||'Open for the season. Mon\u2013Fri 11am\u20137pm at 800 Ashmun St.'):(note||'Closed for the season. Back when the weather warms up.');
     el.hidden=false;
+    var ld=document.getElementById('ld-business');
+    if(ld&&!open){try{var j=JSON.parse(ld.textContent);delete j.openingHoursSpecification;j.description='Closed for the season. Reopens in the warmer months.';ld.textContent=JSON.stringify(j);}catch(e){}}
   }).catch(function(){});
   var b=document.querySelector('.burger'),p=document.getElementById('site-menu');
   if(!b||!p)return;
