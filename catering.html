@@ -81,10 +81,11 @@
   <div class="wrap">
     <h2 class="kicker">Book Your Event</h2>
     <p class="sub">Tell us about your event and we'll reply within a day with a menu and pricing. Prefer to talk? Call 906-748-4892.</p>
-    <form action="https://formsubmit.co/motownnate@aol.com" method="POST" class="quote">
+    <form action="https://formsubmit.co/motownnate@aol.com" method="POST" class="quote" id="cater-form">
       <input type="hidden" name="_subject" value="Catering booking from motown-nates-site">
       <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_captcha" value="true">
+      <input type="hidden" name="_started" value="">
       <input type="hidden" name="_next" value="https://onyx-visuals.github.io/motown-nates-site/thanks.html">
       <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
@@ -159,7 +160,7 @@
           </div>
           <label>Other allergies or notes<input type="text" name="dietary_other" placeholder="Anything else the kitchen should know"></label>
         </fieldset>
-        <label>Anything else?<textarea name="details" rows="4" placeholder="Budget range, setup needs, drop-off instructions, questions"></textarea></label>
+        <label>Anything else?<textarea name="details" rows="4" maxlength="2000" placeholder="Budget range, setup needs, drop-off instructions, questions"></textarea></label>
       </div>
 
       <div class="fsubmit">
@@ -188,6 +189,18 @@
 
 <script>
 (function(){
+  var f=document.getElementById('cater-form');
+  if(f){
+    var t0=Date.now(); f.querySelector('[name="_started"]').value=String(t0);
+    f.addEventListener('submit',function(e){
+      var fast=Date.now()-t0<4000;
+      var honey=f.querySelector('[name="_honey"]').value;
+      var phone=f.querySelector('[name="phone"]').value.replace(/\D/g,'');
+      var msg=(f.querySelector('[name="details"]').value||'');
+      var links=(msg.match(/https?:\/\//g)||[]).length;
+      if(fast||honey||phone.length<7||links>2){e.preventDefault();alert('Something looks off with this submission. Please check your phone number and try again, or call 906-748-4892.');}
+    });
+  }
   var b=document.querySelector('.burger'),p=document.getElementById('site-menu');
   if(!b||!p)return;
   b.addEventListener('click',function(){
